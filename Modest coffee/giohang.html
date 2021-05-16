@@ -12,6 +12,9 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="css/business-casual.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="shoppingcart.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src="js/jquery-1.11.1.min.js"></script>
    </head>
    <body id="body">
    <div class="wrapper">
@@ -122,89 +125,150 @@
 				</div>
 			 </div>
 		</div>
-     <div class="text">   
-      <div id="demo" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ul class="carousel-indicators">
-            <li data-target="#demo" data-slide-to="0" class="active"></li>
-            <li data-target="#demo" data-slide-to="1"></li>
-            <li data-target="#demo" data-slide-to="2"></li>
-          </ul>
-           <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="css/Modest_coffee_photo/Artboard 1.jpg" >
-      </div>
-      <div class="carousel-item">
-        <img src="css/Modest_coffee_photo/Artboard 2.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="css/Modest_coffee_photo/Artboard 3.jpg">
-      </div>
+    <div class="hinhnen">
+<div class="bestproduct">
+    <div class="gioithieu text-center bg-faded p-5 rounded">
+        <span class="subheading">Giỏ Hàng</span>
     </div>
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-  
-      </div>
-      </div>
-      <section class="page-section clearfix">
-         <div class="container">
-           <div class="intro">
-             <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="css/Modest_coffee_photo/intro.jpg" alt="">
-             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-               <h2 class="section-heading mb-4">
-                 <span class="section-heading-upper">Fresh Coffee</span>
-                 <span class="section-heading-lower">Worth Drinking</span>
-               </h2>
-               <p class="mb-3">Với mỗi cốc cafe là sự chất lượng đến từ khâu xuất nhập khẩu đến khâu chế biến .Chúng tôi đặt cả tấm lòng đến từng ly cà phê để quý khách có thể cảm nhận được hương vị cà phê đúng chuẩn Việt!
-               </p>
-               <div class="intro-button mx-auto">
-                 <a class="btn btn-primary btn-xl" href="#">Visit Us Today!</a>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
-   </body>
-   <section class="banner clearfix">
-      <div class="banner-sus">
-            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="css/Modest_coffee_photo/cafexay.jpg" >
-         <div class="mota left-0 text-center bg-faded p-5 rounded">
-            <ul>
-               <li>
-               <span><strong>Cà phê xay nguyên chất</strong></span>
-               </li>
-               <p>Chúng tôi cam đoan dùng hạt cà phê thật</p>
-               Hạt cà phê được nhập khẩu từ những cây
-                cà phê Arabica tốt nhất ở Đà Lạt.
-            </ul>
-         </div>
-      </div>
-   </section>
-	 <section class="sale">
-       <div class="sale-sus">
-          <div class="imgsale">
-             <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="css/Modest_coffee_photo/mug-1-peace_2000.jpg" >
-          </div>
-          <div class="motasp left-0 text-center bg-faded p-5 rounded">
-             <ul>
-                <li>
-                   <strong>Tưng bừng khai trương</strong>
-                </li>
-               Nhân dịp khai trương ngày 15.1.2020 .Chúng tôi xin kính tặng 100 quý khách
-                hàng đầu tiên 1 ly sứ cao cấp hoàn toàn miễn phí .
-               Và có cơ hội trúng thưởng những phần quà cũng như voucher hấp dẫn.
-                Còn chần chờ mà không tham gia ngay
-                Chương trình áp dụng từ ngày 15.1.2020 đến 20.1.2020
-             </ul>
-          </div>
-       </div>
-    </section>
-	</div>
+    <br>
+<div class="container">
+<div style="background-color: white">
+ <table id="cart" class="table table-hover table-condensed"> 
+  <thead> 
+   <tr> 
+    <th style="width:50%">Tên sản phẩm</th> 
+    <th style="width:10%">Giá</th> 
+    <th style="width:8%">Số lượng</th> 
+    <th style="width:22%" class="text-center">Thành tiền</th> 
+    <th style="width:10%"> </th> 
+   </tr> 
+  </thead> 
+  <tbody><tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img src="css/Modest_coffee_photo/drink-7.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <p>Mojito Cuba</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">80.000 đ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+   </td> 
+   <td data-th="Subtotal" class="text-center">80.000 đ</td> 
+   <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+    </button>
+   </td> 
+  </tr> 
+  <tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img src="css/Modest_coffee_photo/drink-10.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <p>Sinh Tố Dâu</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">60.000 đ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+   </td> 
+   <td data-th="Subtotal" class="text-center">60.000 đ</td> 
+   <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+    </button>
+   </td> 
+  </tr>
+  <tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img src="css/Modest_coffee_photo/drink-12.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <p>Sinh Tố Việt Quất</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">70.000 đ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+   </td> 
+   <td data-th="Subtotal" class="text-center">70.000 đ</td> 
+   <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+    </button>
+   </td> 
+  </tr>
+  <tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img src="css/Modest_coffee_photo/menu-2.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <p>Burned Milk Tea</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">50.000 đ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+   </td> 
+   <td data-th="Subtotal" class="text-center">50.000 đ</td> 
+   <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+    </button>
+   </td> 
+  </tr>
+  <tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img src="css/Modest_coffee_photo/drink-15.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <p>Trà Lipton (Đá/Không Đá)</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">35.000 đ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+   </td> 
+   <td data-th="Subtotal" class="text-center">35.000 đ</td> 
+   <td class="actions" data-th="">
+    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+    </button>
+   </td> 
+  </tr> 
+  </tbody><tfoot> 
+   <tr class="visible-xs"> 
+    <td class="text-center"><strong>Tổng 200.000 đ</strong>
+    </td> 
+   </tr> 
+   <tr> 
+    <td><a class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+    </td> 
+    <td colspan="2" class="hidden-xs"> </td> 
+    <td class="hidden-xs text-center"><strong>Tổng tiền 295.000 đ</strong>
+    </td> 
+    <td><a class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+    </td> 
+   </tr> 
+  </tfoot> 
+ </table>
+</div>
+</div>
+</div>
+</div>
+</div>
 	<footer>
        <ul>
     <li>
